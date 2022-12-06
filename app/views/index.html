@@ -1,0 +1,70 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  New heading sizes prototypes
+{% endblock %}
+
+{% block header %}
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        New heading sizes prototypes
+        <span class="govuk-caption-xl">GOV.UK Prototype Kit {{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p>
+        Protoypes of several page types across TPR showcasing the new heading sizes using the new "THX" type scale.
+      </p>
+
+      <p>
+        They're responsive, so you can zoom in/out or change window width to see mobile views.
+      </p>
+
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+      {{ govukInsetText({
+        text: "This is NOT production-ready code. It is for prototype purposes only."
+      }) }}
+
+      <h2 class="govuk-heading-m">Pages</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/trustees-roles-and-responsibilities">Trustees: Roles and responsibilities</a>
+        </li>
+        <li>
+          <a href="/code-1-reporting-breaches-of-the-law">Code 1: Reporting breaches of the law</a>
+        </li>
+        <li>
+          <a href="/high-fines-policy-avoidance">High fines policy (avoidance)</a>
+        </li>
+        {# <li>
+          <a href="/v001-Radios/check-your-connection-deadline-RADIOS">v001-R with radios for first question</a>
+        </li>
+        <li>
+          <a href="/v001-Select/check-your-connection-deadline-SELECT">v001-S with selector for first question</a>
+        </li> #}
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{{ govukFooter({}) }}
+
+{% endblock %}

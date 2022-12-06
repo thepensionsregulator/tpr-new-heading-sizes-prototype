@@ -1,0 +1,334 @@
+{% extends "layout_unbranded.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+
+
+{% block pageTitle %}
+  Trustees: Roles and responsibilities – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Home",
+      href: "/index.html"
+    },
+    {
+      text: "Trustees",
+      href: "#"
+    },
+    {
+      text: "Understanding your role",
+      href: '#'
+    }
+  ]
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+     <div class="pageTitleContainer">
+      <h1 id="bott-mar" class="govuk-heading-l">
+        Roles and responsibilities
+      </h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+    <div class="pagecontentsummary">
+      <p>There are different categories of trustees, but you will normally have the same duties and powers.</p>
+
+      <p>Your responsibilities, and how you carry them out, will depend on whether you are managing a scheme with defined benefits or defined contribution (also known as money purchase) benefits. You may be running a scheme that offers both.</p>
+        
+      <p>You can use your powers to delegate some functions, but you still retain accountability. This won't apply for investment choices if you've appointed a fund manager correctly.</p>
+    </div>
+
+    <nav class="anchorlocation pageanchornavigation" aria-labelledby="page-anchor-nav">
+      <h2 id="page-anchor-nav">On this page</h2>
+        <ul class="govuk-list govuk-list--bullet pageanchornavigation__list">
+          <li><a href="#types-of-trustees">Types of trustee</a></li>
+          <li><a href="#duties-and-powers">Duties and powers</a></li>
+          <li><a href="#responsibilities">Responsibilities</a></li>
+          <li><a href="#delegation-and-sub-committees">Delegation and sub-committees</a></li>
+        </ul>
+    </nav>
+
+    <section class="anchorlocation contentbreak" id="types-of-trustees">
+      <h2>Types of trustee</h2>
+        <div class="standardinformation">
+          <p>Some individuals volunteer to be trustees and start with little knowledge or experience of what being a trustee involves. Often they will also be members of the scheme, employees of the sponsoring employer, or both.</p>
+
+          <p>There are different&nbsp;categories of trustees and you may be one or more of the following:</p>
+          
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Individual trustee – you will be one of several trustees responsible for running the scheme. This group is often referred to as a board of trustees. </li>
+            <li>Corporate trustee – where the trustee is a company, you will be a director of that company. However, you will have the same responsibilities as an individual trustee in relation to the scheme. The employer itself may be the corporate trustee. </li>
+            <li>Member-nominated trustees (MNTs) or member-nominated directors (MNDs) – some individual trustees, or directors of a trustee company, may be nominated to be trustees. </li>
+            <li>Employer-nominated trustees (ENTs) or employer-nominated directors (ENDs) may include senior employees like the finance director, where their financial experience and knowledge of the company may be helpful to the trustees or the directors of the trustee company.</li>
+            <li>Professional trustees – someone will normally be considered a professional trustee if they have represented themselves to one or more unrelated schemes as having expertise in trustee matters generally.</li>
+            <li>Chair of trustees – in most&nbsp;schemes with&nbsp;defined contributions, the <a href="">chair of trustees</a>&nbsp;has the additional responsibility of signing the annual chair’s statement, indicating that the scheme is operating in line with the required governance standards.</li>
+         </ul>
+        </div>
+    </section>
+
+    <div class="anchorlocation section" id="duties-and-powers">
+      <h2>Duties and powers</h2>
+        <div class="standardinformation">
+          <p>You have a number of key duties as a trustee.</p>
+          
+          <h3>Act in line with the trust deed and rules</h3>
+          
+          <p>The trust deed and rules, together with pensions legislation, tell you what your powers are as a trustee, and the procedures you must follow. They are important documents and, therefore, you must be familiar with them and with the other documents governing your scheme.</p>
+          
+          <h3>Act prudently, responsibly and honestly</h3>
+          
+          <p>You must act in a way that an ordinary prudent person of business would act in managing their own affairs. This means, for example, that when deciding whether to exercise a power, you must consider the circumstances impartially, having taken account of all the relevant facts, and you must ask for professional advice if necessary.</p>
+
+          <p>Naturally, you must not make any unauthorised personal profit at the expense of the fund. This doesn't mean that, as a trustee, you can't be a member of the scheme but, as a lay trustee, you mustn't profit from the scheme in other ways.</p>
+          
+          <h3>Act in the best interests of your beneficiaries</h3>
+          
+          <p>You must act in the best interests of the scheme’s beneficiaries. A beneficiary is anyone who is entitled to, or who might receive, a benefit from the scheme, now or in the future.</p>
+
+          <h3>Act impartially</h3>
+          
+          <p>You must consider the interests of all the classes of beneficiary covered by the trust deed and rules, and act impartially between them. You have to act fairly between individual beneficiaries too, weighing the interests of the particular individual against the need to protect the security of the beneficiaries as a whole.</p>
+
+          <p>Acting impartially does not mean that each type of member needs to be treated in the same way. But it does mean that the trustee will need to weigh the differing interests of different members against each other.</p>
+
+          <h3>Consider what powers you may have</h3>
+
+          <p>The trust deed and rules give you powers, some of which will be discretionary. Trustees' powers differ from scheme to scheme, but usually the trust deed includes the power to:</p>
+          
+            <ul class="govuk-list govuk-list--bullet">
+              <li>accept contributions into the scheme</li>
+              <li>decide the investment strategy </li>
+              <li>invest the scheme's assets</li>
+              <li>amend the rules of the scheme</li>
+              <li>admit members on special terms</li>
+              <li>increase (or 'augment') members' benefits</li>
+              <li>deal with a funding surplus (defined benefit only)</li>
+              <li>wind up a scheme</li>
+            </ul>
+            
+          <p>In some cases the trust deed or rules may state that the employer has to agree to your use of a particular power, or that you may only use the power if the employer asks you to do so.</p>
+            
+          <p>You may also have some discretionary powers, like deciding who will receive a dependant's pension. You must follow the procedures set out in the trust deed and rules when considering whether to use a discretionary power.</p>
+            
+          <p>You can't usually delegate your powers including your discretionary powers, unless the trust deed and rules allow you to do so. An exception to this is the power to delegate investment decisions.</p>
+           
+          <p>Where the trust deed and rules allow you to delegate a power and you do so, you remain accountable for the actions taken. However, where you have delegated responsibility for investment decisions, your liabilities are generally more restricted. This is as long as you can show that you and the other trustees took appropriate steps to satisfy yourselves of the matters set out above.</p>
+        </div>
+    </div>
+
+{# ================ START TTK Highlight Panel 1 ================ #}
+    <div class="highlightinformation" id="ttk-online-learning-1">
+        <h3>Online learning — The trustee's role: Duties and powers</h3>
+        
+          <p>The Trustee Toolkit tutorial 'Duties and powers' in the module 'The trustee’s role' will help you consider your duty to members and their money and what powers you may have. You must log in or sign up to use the Trustee Toolkit.</p>
+
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Go to the Trustee Toolkit",
+            href: ""
+          }) }}
+      </div>
+
+{# ================ END TTK Highlight Panel 1 ================ #}
+
+      <section class="anchorlocation" id="responsibilities">
+        <h2>Responsibilities</h2>
+          <div class="standardinformation">
+            <p>You are responsible for:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                  <li>contributions</li>
+                  <li>financial records and requirements</li>
+                  <li>investment</li>
+                  <li>your professional advisers and service providers</li>
+                  <li>pension scheme records</li>
+                  <li>members</li>
+                  <li>registration, scheme return and collecting levy</li>
+                  <li>reporting certain matters to the regulator</li>
+              </ul>
+            <h3>Your role in a scheme offering defined contribution (DC) benefits</h3>
+              <p>In schemes offering DC benefits the individual member has a lot of decisions to make about the way they save and&nbsp;what they do with&nbsp;their pension savings when they reach retirement age.</p>
+              <p>As a trustee of a scheme offering DC benefits, you have a responsibility to support your members in making informed decisions.</p>
+              <p>You should:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>ensure that provision is made for members who don’t choose an investment option</li>
+                  <li>understand the investment options you offer members and make sure they are offering appropriate fund choices</li>
+                  <li>help members to understand that how much they receive from the scheme is linked to how much they pay in</li>
+                  <li>encourage members to obtain advice and provide as much support as possible</li>
+                  <li>provide timely and relevant information to:
+                    <ul class="govuk-list govuk-list--bullet sublist-bullet">
+                      <li>prospective members about the scheme</li>
+                      <li>current members about their savings</li>
+                      <li>members approaching retirement about the options they have</li>
+                    </ul>
+                  </li>
+                </ul>
+          </div>
+      </section>
+
+{# ================ START TTK Highlight Panel 2 ================ #}
+    <div class="highlightinformation" id="ttk-online-learning-2">
+        <h3>Online learning — How a DC scheme works (2014)</h3>
+        
+          <p>The Trustee Toolkit module 'How a DC scheme works (2014)' covers risks to good member outcomes, contribution structures, transaction processing, value for money, charges, decisions at retirement and member communications. You must log in or sign up to use the Trustee Toolkit.</p>
+
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Go to the Trustee Toolkit",
+            href: ""
+          }) }}
+      </div>
+
+{# ================ END TTK Highlight Panel 2 ================ #}
+
+      <section class="anchorlocation" id="your-role-in-a-scheme-offering-defined-benefits">
+        <div class="standardinformation">
+          <h3>Your role in a scheme offering defined benefits (DB)</h3>
+            <p>As a trustee of a scheme offering DB benefits, you have a responsibility to ensure there is enough money in the scheme to pay members’ pensions as and when they need to be paid.</p>
+            <p>To see how much money is in the scheme, you have to arrange for a <a href="">valuation</a> to be carried out, no less than once every three years. This assesses the assets and the liabilities of the scheme. You need to appoint a scheme actuary to carry out this process. If the scheme is not fully funded, you must draw up a <a href="">recovery plan</a>&nbsp;and submit it to the regulator within 15 months of the effective date of the valuation.</p>
+            <p>The recovery plan sets out how much will be paid into the scheme and over what period.</p>
+            <p>In most cases, you have to agree the recovery plan with the sponsoring employer.</p>
+            <p>You also have to be responsible for monitoring <a href="">scheme investments</a>&nbsp;and keeping an eye on the <a href="">financial strength and health of the employer</a>&nbsp;who is standing behind the scheme.</p>
+        </div>
+      </section>
+
+{# ================ START TTK Highlight Panel 3 ================ #}
+    <div class="highlightinformation" id="ttk-online-learning-3">
+        <h3>Online learning — How a DB scheme works</h3>
+        
+          <p>The Trustee Toolkit module 'How a DB scheme works' covers how the benefits in a DB scheme are accrued and how they are calculated. You will also consider the strength of the employer covenant. You must log in or sign up to use the Trustee Toolkit.</p>
+
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Go to the Trustee Toolkit",
+            href: ""
+          }) }}
+      </div>
+
+{# ================ END TTK Highlight Panel 3 ================ #}
+
+      <section class="anchorlocation" id="delegation-and-sub-committees">
+        <h2>Delegation and sub-committees</h2>
+          <div class="standardinformation">
+            <p>In practice, pensions are increasingly complex. You need to be clear on your objectives and to focus your time on the areas that have the biggest impact on achieving those objectives.</p>
+            <p>This means focusing on strategic issues and considering whether to delegate some day-to-day activities and decision-making.</p>
+            <p>As a trustee you are accountable for operations and activities, even where you have delegated responsibility to third parties or others in-house. So you need controls in place to monitor and make sure that all the activities you are accountable for are delivered.</p>
+            <p>Being clear on the roles and responsibilities of all the main participants involved in running your scheme is essential. It will help the board to:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>respond to important issues and make decisions effectively</li>
+                <li>operate efficiently and free up time to focus on strategic priorities</li>
+                <li>monitor and oversee the main scheme activities effectively, including those delivered by third parties such as risk management, administration, investment and member communication</li>
+              </ul>
+            <p>In accordance with trustee powers under the scheme rules and documents, the board should decide:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>the appropriate governance structure for the scheme, proportionate to your scheme’s risk and complexity</li>
+                <li>what matters are reserved for the trustee board</li>
+                <li>what can be delegated, for example to sub-committees or working groups</li>
+              </ul>
+            <p>For delegated matters you should decide and document how decisions are made and escalated and who does this. You should also decide and document what should be reported to the board, who does this and how.</p>
+            <p>You should have clear contractual terms (where appropriate), terms of reference, tables of accountabilities and delegated responsibilities, and service level agreements. This will help everyone understand what their role is and ensure the efficient flow of information between key players.</p>
+            <p>Download <a href="">example terms of reference for trustee boards and sub-committees (PDF, 47kb, 6 pages)</a>.</p>
+          </div>
+      </section>
+
+{# ================ START Highlight Panel  ================ #}
+    <div class="highlightinformation" id="how-do-i-know-my-scheme-is-being-run-well-panel">
+      Go to <a href="">how do I know my scheme is being run well?</a>&nbsp;to find out which advisers you can delegate functions to.
+    </div>
+
+{# ================ END TTK Highlight Panel 3 ================ #}
+
+      {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+      {{ govukPagination({
+        previous: {
+          labelText: "1. Overview",
+          href: "#"
+        },
+        next: {
+          labelText: "3. Connecting to pensions dashboards",
+          href: "#"
+        }
+      }) }}
+
+      <div class="app-back-to-top app-back-to-top--fixed" data-module="app-back-to-top">
+        <a class="govuk-link govuk-link--no-visited-state app-back-to-top__link" href="#top">
+          <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+            <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+          </svg>Back to top
+        </a>
+      </div>
+      
+    </div>
+    {# ================ START R-H Related Column ================ #}
+  <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Case studies on being a trustee
+        </h2>
+
+        <p>Read case studies from the Association of Member Nominated Trustees on what it's like to be a trustee.</p>
+
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list">
+            <li>
+              <a href="">
+                Douglas' story
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Lucas' story
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Ray's story
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+
+  {# ================ END R-H Related Column ================ #}
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{{ govukFooter({}) }}
+
+{% endblock %}
