@@ -354,6 +354,10 @@ div.govuk-grid-column-two-thirds.app-split-pane__nav {
   margin-bottom: 12px;
 }
 
+#intro-para {
+  margin-top: 0;
+}
+
 input {
   border: 1px solid #3d3d3d !important;
 }
@@ -427,7 +431,11 @@ input {
 }
 
 .standardinformation {
-  margin-bottom: 42px;
+  margin-bottom: 38px; // Was 42px
+}
+
+.after-intro-para {
+  margin-top: 48px;
 }
 
 .govuk-list--bullet {
@@ -677,6 +685,10 @@ button, .govuk-button {
   list-style-type: lower-roman;
 }
 
+.last-in-list {
+  margin-bottom: 0;
+}
+
 /* ================ END List Styles ================ */
 
 /* ================ START Back to Top Styles ================ */
@@ -735,9 +747,9 @@ button, .govuk-button {
     vertical-align: middle;
   }
 
-  /* ================ END Back to Top Styles ================ */
+/* ================ END Back to Top Styles ================ */
 
-  /* ================ START L-H Menu Styles ================ */
+/* ================ START L-H Menu Styles ================ */
 
   .app-subnav {
     margin-bottom: 100px;
@@ -806,7 +818,7 @@ button, .govuk-button {
   }
 
   .govuk-link--no-visited-state:visited {
-    color: #006EBC !important;
+    color: #006EBC;
 }
 
 .app-subnav li {
@@ -820,5 +832,24 @@ button, .govuk-button {
   line-height: 1.5 !important;
 }
 
-    /* ================ END L-H Menu Styles ================ */
+.app-subnav .arrow-down, .app-subnav .arrow-up {
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: 98% 70%;
+  color: #006ebc!important;
+}
+
+.app-subnav .arrow-down {
+  background-image: url(https://www.thepensionsregulator.gov.uk/Images/arrow-down.svg);
+}
+
+.app-subnav .arrow-down .app-subnav__link, .app-subnav .arrow-up .app-subnav__link {
+  padding-right: 3rem;
+}
+
+.app-split-pane__nav.govuk-grid-column-one-third, .app-subnav-heading {
+  margin-top: 0 !important;
+}
+
+/* ================ END L-H Menu Styles ================ */
   
