@@ -83,7 +83,7 @@
 
           </li>
 
-          <li class="app-subnav__section-item app-subnav__section-item--current">
+          <li class="app-subnav__section-item app-subnav__section-item--current arrow-down">
             <a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="">High fines policy avoidance</a>
 
             {# <ul class="app-subnav__section app-subnav__section--nested">
@@ -476,7 +476,7 @@
         </div>
       </section>
 
-      <section class="anchorlocation contentbreak" id="when-this-policy-applies">
+      <section class="anchorlocation contentbreak after-intro-para" id="when-this-policy-applies">
         <h2 class="govuk-heading-m">When this policy applies</h2>
 
         <div class="standardinformation">
@@ -598,11 +598,11 @@
       <section class="anchorlocation contentbreak" id="avoidance-of-employer-debt">
         <h2 class="govuk-heading-m">Avoidance of employer debt or conduct risking accrued scheme benefits</h2>
         <div class="standardinformation">
-          
+
           <ol class="govuk-list govuk-list--number" start="17">
-            
+
             <li>Where we decide to impose a financial penalty on either of these bases, we expect to calculate the penalty amount in accordance with the following framework.</li>
-            
+
             <li>The calculation of the penalty, and the amount arrived at, will depend on:<br>
               <p>
                 <strong>Step 1:</strong> assessment of the applicable band level, which depends on the person’s level of culpability and the harm caused to the scheme and/or member outcomes, and</p>
@@ -612,6 +612,106 @@
           </ol>
         </div>
       </section>
+
+      <section class="anchorlocation contentbreak" id="step-1-band-level-culpability-and-harm">
+        <h2 class="govuk-heading-m">Step 1: Band level culpability and harm</h2>
+        <div class="standardinformation">
+          <ol class="govuk-list govuk-list--number" start="19">
+            <li>When determining the band level for a particular penalty we will take account of:<br>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>the level of culpability of the person concerned, and</li>
+                <li>the degree of harm to the scheme and / or member outcomes as a result of the act</li>
+              </ul>
+            </li>
+            <li>As some degree of culpability or harm is an integral feature of these penalties, we do not generally expect to issue a penalty of less than £100,000.</li>
+            <li>The table below shows the range of the penalty amount that corresponds to each band level:<br>
+
+              {% from "govuk/components/table/macro.njk" import govukTable %}
+
+              {{ govukTable({
+                firstCellIsHeader: false,
+                head: [
+                  {
+                    text: "Band",
+                    colspan: 2
+                  },
+                  {
+                    text: "Penalty banding"
+                  }
+                ],
+                rows: [
+                  [
+                    {
+                      text: "Band HF1",
+                      classes: "govuk-!-width-one-third"
+                    },
+                    {
+                      text: "Lower culpability / Lower harm",
+                      classes: "govuk-!-width-one-third"
+                    },
+                    {
+                      text: "£100,000 to £400,000",
+                      classes: "govuk-!-width-one-third"
+                    }
+                  ],
+                  [
+                    {
+                      text: "Band HF2",
+                      classes: "govuk-!-width-one-third"
+                    },
+                    {
+                      html: "Higher culpability / Lower harm<br>
+                      or<br>
+                      Lower culpability / Higher harm",
+                      classes: "govuk-!-width-one-third"
+                    },
+                    {
+                      text: "£250,000 to £650,000",
+                      classes: "govuk-!-width-one-third"
+                    }
+                  ],
+                  [
+                    {
+                      text: "Band HF3",
+                      classes: "govuk-!-width-one-third"
+                    },
+                    {
+                      text: "Higher culpability / Higher harm",
+                      classes: "govuk-!-width-one-third"
+                    },
+                    {
+                      text: "£400,000 to £1 million",
+                      classes: "govuk-!-width-one-third"
+                    }
+                  ]
+                ]
+              }) }}
+              
+            </li>
+            <li>We will consider evidence of any features of culpability and harm, on the facts (examples of which are listed below), and their severity (individually and collectively), when determining the band for the penalty.</li>
+            <li>Examples of features of culpability include:<br>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>deliberate act or failure and / or causing or encouraging another person to act or fail to act</li>
+                <li>recklessness or negligence, including disregard of risks or lack of care, whether based on actual foresight or what could reasonably be expected to have been known</li>
+                <li>significant decision-making power, responsibilities, influence and / or proximity to the decision-making</li>
+                <li>holding a position of trust or being subject to professional duties</li>
+              </ul>
+            </li>
+            <li>The assessment of the level of a person’s culpability is not simply a question of the number of culpability features engaged on a given set of facts, but also the level of engagement of any such features. The culpability of a person whose conduct involves three features moderately may be less culpable than that of a person whose conduct has engaged a single culpability feature significantly. For example, an intentional act by a person who misled others would likely attract high culpability.</li>
+            <li>Examples of features of harm include:<br>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>any negative impact on the scheme as a whole or any of its members</li>
+                <li>whether the impact of the act is irreversible</li>
+                <li>whether the act has resulted in an increased reliance on the employer covenant</li>
+                <li>whether the act has increased the likelihood of compensation being payable by the Pension Protection Fund</li>
+                <li>whether the act may pose a significant or systemic risk to our statutory objectives</li>
+                <li>whether the act may undermine public confidence in pensions</li>
+              </ul>
+            </li>
+            <li>As with the assessment of culpability, the degree of harm will be relevant to the banding of a person’s penalty, rather than simply counting the number of features of harm applicable on the facts. For example, an act that has resulted in the scheme employer entering administration with a significant deficit in the scheme made worse by the act would likely attract high harm.</li>
+          </ol>
+        </div>
+      </div>
 
       <section class="anchorlocation" id="your-role-in-a-scheme-offering-defined-benefits">
         <div class="standardinformation">
