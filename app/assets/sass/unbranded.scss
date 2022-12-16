@@ -435,7 +435,7 @@ input {
 }
 
 .after-intro-para {
-  margin-top: 48px;
+  margin-top: 46px;
 }
 
 .govuk-list--bullet {
@@ -685,7 +685,7 @@ button, .govuk-button {
   list-style-type: lower-roman;
 }
 
-.last-in-list {
+.last-in-list, .standardinformation ol:last-of-type, .standardinformation ol li:last-of-type {
   margin-bottom: 0;
 }
 
